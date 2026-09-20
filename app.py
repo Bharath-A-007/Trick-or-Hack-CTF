@@ -35,10 +35,7 @@ CREDITS = {
     "department": "Students of CSE — Cybersecurity",
     "club": "CRYPTON Club",
     "team": [
-        {"role": "Lead Challenge Developer", "name": "Bharath A"},
-        {"role": "Exploit Developer", "name": "Chethan Kumar CS"},
-        {"role": "QA Engineer", "name": "Vijay Kumar S"},
-        {"role": "Lead Organizer", "name": "Chinmayi B"},
+        {"role": "Lead Challenge Developer", "name": "BHARATH A"},
     ],
 }
 
@@ -337,7 +334,7 @@ def admin_dashboard():
     top = conn.execute("SELECT name, score FROM teams ORDER BY score DESC LIMIT 10").fetchall()
     conn.close()
     return render_template("admin_dashboard.html", team_count=team_count, solve_count=solve_count,
-                            active_locks=active_locks, feed=feed, top=top)
+                           active_locks=active_locks, feed=feed, top=top)
 
 
 @app.route("/admin/teams")
