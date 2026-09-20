@@ -160,6 +160,6 @@ Team says "6th member" needed -> intentional. Max 5 per team is enforced
 CREDITS
 ---------
 Department: Students of CSE — Cybersecurity, CRYPTON Club
-Lead Challenge Developer: Bharath A
+Lead Challenge Developer: BHARATH A
 
 Happy haunting, and good luck to every team. 🎃
