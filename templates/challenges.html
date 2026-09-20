@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>🦇 Challenges — Team: {{ member.team_name }} ({{ member.team_score }} pts)</h1>
+{% for cat, items in by_category.items() %}
+  <h2 class="category-title">{{ cat }}</h2>
+  <div class="chall-grid">
+    {% for c in items %}
+      <a class="chall-tile {{ 'solved' if c.solved else '' }}" href="{{ url_for('challenge_detail', slug=c.slug) }}">
+        <span class="web-corner">{{ '✅' if c.solved else '🕸️' }}</span>
+        <div class="diff">{{ c.difficulty }}</div>
+        <div><strong>{{ c.title }}</strong></div>
+        <div class="pts">{{ c.points }} pts</div>
+      </a>
+    {% endfor %}
+  </div>
+{% endfor %}
+{% endblock %}
